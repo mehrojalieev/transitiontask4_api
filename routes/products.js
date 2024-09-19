@@ -4,7 +4,7 @@ const pool = require("../config/db");
 
 router.get("/all", async (req, res) => {
     try {
-        const { rows: allProducts } = await pool.query("SELECT * FROM products");
+        const { rows: allProducts } = await pool.query("SELECT * FROM shop_products");
         res.status(200).json(allProducts);
     } 
     catch (error) {
